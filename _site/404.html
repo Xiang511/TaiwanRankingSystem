@@ -1,42 +1,266 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Your awesome title | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
-<meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Your awesome title" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
-<meta property="og:site_name" content="Your awesome title" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Your awesome title" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Your awesome title","url":"http://localhost:4000/404.html"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
-<body><header class="site-header" role="banner">
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Jekyll Gitbook</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Build Jekyll site with the GitBook style.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="HE Tao"><link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/style.css">
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-splitter/splitter.css">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/rouge/colorful.css">
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <style type="text/css" media="screen">
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/jekyll-gitbook/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/jekyll-gitbook//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+
+        
+            <link rel="next" href="/jekyll-gitbook/jekyll/2019-04-27-why.html" />
+        
+    </head>
+    <body>
+        <div class="book"><div class="book-summary">
+    <script type="text/javascript">
+        // Fixes the page links scroll problem on both desktop and mobile browsers
+        function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({scrollTop: 0});
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+        }
+        // Fixes the anchor links scroll problem on mobile browsers
+        function mobilePageScrollToAnchor(element) {
+            $(element).closest('li.chapter').find('ul>li').removeClass('active');
+            $(element).parent().addClass('active');
+            if ($(document).width() <= 1240) {
+                $('div.body-inner').animate({scrollTop: $($(element).attr('href')).get(0).offsetTop});
+            }
+            return true;
+        }
+    </script>
+
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/jekyll-gitbook/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook">
+            
+                <a href="/jekyll-gitbook/" onclick="pageScrollToTop(this)">
+                    Jekyll Gitbook
+                </a>
+            </li>
+
+            <li class="divider"></li>
+
+            
+                <!-- <p>pages</p> -->
+                
+                    
+
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/pages/about/">
+                        
+                            <a href="/jekyll-gitbook/pages/about/" onclick="pageScrollToTop(this)">
+                                About
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/pages/contact/">
+                        
+                            <a href="/jekyll-gitbook/pages/contact/" onclick="pageScrollToTop(this)">
+                                Contact
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/pages/design/draft/">
+                        
+                            <a href="/jekyll-gitbook/pages/design/draft/" onclick="pageScrollToTop(this)">
+                                Design Draft
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+
+                    
+                        <li class="divider"></li>
+                    
+                
+            
+                <!-- <p>posts</p> -->
+                
+                    
+
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2019-04-27-why.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2019-04-27-why.html" onclick="pageScrollToTop(this)">
+                                Why Jekyll with GitBook
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2019-04-28-howto.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2019-04-28-howto.html" onclick="pageScrollToTop(this)">
+                                How to Get Started
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2019-04-29-license.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2019-04-29-license.html" onclick="pageScrollToTop(this)">
+                                License
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2021-08-10-toc.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2021-08-10-toc.html" onclick="pageScrollToTop(this)">
+                                How to Generate TOC
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2022-05-24-page_cover.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2022-05-24-page_cover.html" onclick="pageScrollToTop(this)">
+                                Page with cover image
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2022-06-26-wide_tables.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2022-06-26-wide_tables.html" onclick="pageScrollToTop(this)">
+                                Wide tables
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html" onclick="pageScrollToTop(this)">
+                                Tips, Warnings, and Dangers
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2023-08-31-mermaid.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2023-08-31-mermaid.html" onclick="pageScrollToTop(this)">
+                                Diagrams with mermaid.js
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" onclick="pageScrollToTop(this)">
+                                MathJax and LaTeX
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2023-12-12-footnotes.html">
+                        
+                            <a href="/jekyll-gitbook/jekyll/2023-12-12-footnotes.html" onclick="pageScrollToTop(this)">
+                                Using Footnotes
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+
+                    
+                        <li class="divider"></li>
+                    
+                
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Jekyll Gitbook</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="">Jekyll Gitbook</h1>
+                    
+
+                    <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -56,32 +280,214 @@
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Your awesome title</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
-      </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
 </div>
 
-      <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
-      </div>
-    </div>
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
 
-  </div>
 
-</footer>
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+<a href="/jekyll-gitbook/" class="navigation navigation-pre navigation-unique">
+                        <i class="fa"></i>
+                    </a>
+
+                    
+                        <a href="/jekyll-gitbook/jekyll/2019-04-27-why.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Why Jekyll with GitBook">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+
+        
+        "next": {
+            "title": "Why Jekyll with GitBook",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_posts/2019-04-27-why.md",
+            "ref": "_posts/2019-04-27-why.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Jekyll Gitbook",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "404.html",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2024-02-29 23:04:07 +0800"
+    },
+    "basePath": "/jekyll-gitbook",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/jekyll-gitbook/assets/gitbook/gitbook.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/theme.js"></script>
+
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/jekyll-gitbook/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
 </body>
-
 </html>
