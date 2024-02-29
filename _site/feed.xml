@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/jekyll-gitbook/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll-gitbook/" rel="alternate" type="text/html" /><updated>2024-03-01T07:38:54+08:00</updated><id>http://localhost:4000/jekyll-gitbook/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
-</subtitle><author><name>LiXiang</name></author><entry><title type="html">All releases</title><link href="http://localhost:4000/jekyll-gitbook/jekyll/2024-03-01-All-releases.html" rel="alternate" type="text/html" title="All releases" /><published>2024-03-01T00:00:00+08:00</published><updated>2024-03-01T00:00:00+08:00</updated><id>http://localhost:4000/jekyll-gitbook/jekyll/All-releases</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/jekyll/2024-03-01-All-releases.html"><![CDATA[<h2 id="v132">V1.3.2</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/jekyll-gitbook/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll-gitbook/" rel="alternate" type="text/html" /><updated>2024-03-01T07:46:08+08:00</updated><id>http://localhost:4000/jekyll-gitbook/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+</subtitle><author><name>LiXiang</name></author><entry><title type="html">All releases</title><link href="http://localhost:4000/jekyll-gitbook/jekyll/2024-03-01-AllReleases.html" rel="alternate" type="text/html" title="All releases" /><published>2024-03-01T00:00:00+08:00</published><updated>2024-03-01T00:00:00+08:00</updated><id>http://localhost:4000/jekyll-gitbook/jekyll/AllReleases</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/jekyll/2024-03-01-AllReleases.html"><![CDATA[<h2 id="v132">V1.3.2</h2>
 <p>2024-2-25 V1.3.2</p>
 
 <ul>
@@ -116,4 +116,13 @@
     <p>刪除
  聊天室</p>
   </li>
-</ul>]]></content><author><name>LiXiaang</name></author><category term="Jekyll" /><summary type="html"><![CDATA[V1.3.2 2024-2-25 V1.3.2]]></summary></entry></feed>
+</ul>]]></content><author><name>LiXiaang</name></author><category term="Jekyll" /><summary type="html"><![CDATA[V1.3.2 2024-2-25 V1.3.2]]></summary></entry><entry><title type="html">Why Jekyll with GitBook</title><link href="http://localhost:4000/jekyll-gitbook/jekyll/2019-04-27-why.html" rel="alternate" type="text/html" title="Why Jekyll with GitBook" /><published>2019-04-27T00:00:00+08:00</published><updated>2019-04-27T00:00:00+08:00</updated><id>http://localhost:4000/jekyll-gitbook/jekyll/why</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/jekyll/2019-04-27-why.html"><![CDATA[<p>GitBook is an amazing frontend style to present and organize contents (such as book chapters
+and blogs) on Web. The typical to deploy GitBook at <a href="https://pages.github.com">Github Pages</a>
+is building HTML files locally and then push to Github repository, usually to the <code class="language-plaintext highlighter-rouge">gh-pages</code>
+branch. However, it’s quite annoying to repeat such workload and make it hard for people do
+version control via git for when there are generated HTML files to be staged in and out.</p>
+
+<p>This theme takes style definition out of generated GitBook site and provided the template
+for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
+to <a href="https://pages.github.com">Github Pages</a> without generating and uploading HTML bundle every time when there are
+changes to the original repository.</p>]]></content><author><name>Tao He</name></author><category term="Jekyll" /><summary type="html"><![CDATA[GitBook is an amazing frontend style to present and organize contents (such as book chapters and blogs) on Web. The typical to deploy GitBook at Github Pages is building HTML files locally and then push to Github repository, usually to the gh-pages branch. However, it’s quite annoying to repeat such workload and make it hard for people do version control via git for when there are generated HTML files to be staged in and out.]]></summary></entry></feed>
