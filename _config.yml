@@ -1,8 +1,8 @@
 # Configurations
-title:            HI
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Home
+longtitle:        Taiwan Clash Royale Ranking System
+author:           LiXiang
+email:            toby91511@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
 
@@ -64,3 +64,5 @@ plugins:
   - jekyll-feed
   - jekyll-readme-index
   - jemoji
+
+verbose: debug
