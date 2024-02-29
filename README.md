@@ -1,3 +1,9 @@
+---
+layout: home
+title: Jekyll Gitbook Theme
+permalink: /
+---
+
 ## Taiwan Clash Royale Ranking System - TCRS
 
 你是否想與其他玩家比較天梯的實力？<br>
