@@ -1,6 +1,6 @@
 ---
 title: All releases
-author: LiXiaang
+author: LiXiang
 date: 2024-03-01
 category: Jekyll
 layout: post
