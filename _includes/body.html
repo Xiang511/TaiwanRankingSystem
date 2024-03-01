@@ -20,7 +20,7 @@
 
                     {{ content }}
 
-                    {% if page.title != "Features"  %}
+                    {% if page.title != "Features" and page.title != "About Me" %}
                     {%- include gittalk.html -%}
                     {% endif %}
 
