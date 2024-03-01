@@ -66,3 +66,10 @@ plugins:
   - jemoji
 
 verbose: debug
+
+gitalk:
+  clientID: 'ac1cd47655fc18fc5370',
+  clientSecret: '5069b70c2c462fc6d9882be72672addcdf8210f9',
+  repo: 'TCRS',
+  owner: 'Xiang511',
+  admin: ['Xiang511']
