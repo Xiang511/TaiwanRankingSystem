@@ -21,7 +21,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/TCRS/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
 <link rel="shortcut icon" href="/TCRS//assets/logo.svg" type="image/x-icon">
-
+<a href="https://SiteStates.com" title="站長工具" style="display: none;">
+    <img src="https://SiteStates.com/show/image/33586.jpg" border="0" />
+</a>
 
 
 
@@ -170,7 +172,22 @@
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
-</section>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'ac1cd47655fc18fc5370',
+        clientSecret: '5069b70c2c462fc6d9882be72672addcdf8210f9',
+        repo: 'TCRS',
+        owner: 'Xiang',
+        admin: ['Xiang'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script></section>
             </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
@@ -351,7 +368,7 @@ window.MathJax = {
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2024-03-01 09:54:51 +0800"
+        "time": "2024-03-02 00:56:31 +0800"
     },
     "basePath": "/TCRS",
     "book": {

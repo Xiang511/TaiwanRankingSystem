@@ -19,7 +19,7 @@
                     {% endif %}
 
                     {{ content }}
-
+                    {%- include gittalk.html -%}
                     {%- if jekyll.environment != 'dev' and site.disqushandler -%}
                         {%- include disqus.html -%}
                     {%- endif -%}
