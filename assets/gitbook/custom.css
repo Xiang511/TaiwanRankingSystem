@@ -158,10 +158,10 @@
 /* Custom font settings */
 
 .book.font-family-0 {
-    font-family: Georgia, serif;
+    font-family: "Noto Sans TC", sans-serif;
 }
 .book.font-family-1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Helvetica,"Noto Sans TC", "Noto Sans TC", sans-serif;
 }
 
 /* Render wide tables */
