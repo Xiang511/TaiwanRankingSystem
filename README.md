@@ -2,7 +2,7 @@
 layout: home
 title: 台灣皇室戰爭排名系統
 cover: https://sighingnow.github.io/jekyll-gitbook/assets/dinosaur.gif
-permalink: /TCRS
+permalink: /
 ---
 
 #### Taiwan Clash Royale Ranking System - TCRS
