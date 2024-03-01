@@ -3,11 +3,11 @@
 <div id="gitalk-container"></div>
 <script>
     var gitalk = new Gitalk({
-        clientID: '{{stie.gitalk.client_id}}',
-        clientSecret: '{{stie.gitalk. client_secret}}',
-        repo: '{{stie.gitalk.repo}}',
-        owner: '{{stie.gitalk.owner}}',
-        admin: ['{{stie.gitalk.admin}}'],
+        clientID: '{{site.gitalk.client_id}}',
+        clientSecret: '{{site.gitalk. client_secret}}',
+        repo: '{{site.gitalk.repo}}',
+        owner: '{{site.gitalk.owner}}',
+        admin: ['{{site.gitalk.admin}}'],
         id: location.pathname,      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
     })
