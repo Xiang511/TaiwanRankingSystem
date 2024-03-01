@@ -9,14 +9,6 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-gitalk:
-  client_id: 'ac1cd47655fc18fc5370',
-  client_secret: '5069b70c2c462fc6d9882be72672addcdf8210f9',
-  repo: 'TCRS',
-  owner: 'Xiang511',
-  admin: ['Xiang511']
-
-
 url:              'https://xiang511.com'
 baseurl:          '/TCRS'
 rss:              RSS
@@ -74,4 +66,5 @@ plugins:
   - jemoji
 
 verbose: debug
+
 
