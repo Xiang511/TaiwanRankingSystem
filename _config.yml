@@ -4,7 +4,7 @@ longtitle:        Taiwan Clash Royale Ranking System
 author:           LiXiang
 email:            toby91511@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  系統會記錄玩家排名，並顯示在網站上。你可以隨時查看自己的積分和排名，並與其他玩家競爭。
 
 version:          1.0
 gitbook_version:  3.2.3
