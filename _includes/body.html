@@ -19,7 +19,11 @@
                     {% endif %}
 
                     {{ content }}
+
+                    {% if page.title != "Features"  %}
                     {%- include gittalk.html -%}
+                    {% endif %}
+
                     {%- if jekyll.environment != 'dev' and site.disqushandler -%}
                         {%- include disqus.html -%}
                     {%- endif -%}
