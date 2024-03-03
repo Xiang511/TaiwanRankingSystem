@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 台灣皇室戰爭排名系統
+title: 台灣皇室戰爭排名系統 V1.3.2
 cover: https://sighingnow.github.io/jekyll-gitbook/assets/dinosaur.gif
 permalink: /
 ---
