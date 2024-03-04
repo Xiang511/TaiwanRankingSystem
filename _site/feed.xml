@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/TCRS/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/TCRS/" rel="alternate" type="text/html" /><updated>2024-03-03T13:49:58+08:00</updated><id>http://localhost:4000/TCRS/feed.xml</id><title type="html">Home</title><subtitle>系統會記錄玩家排名，並顯示在網站上。你可以隨時查看自己的積分和排名，並與其他玩家競爭。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/TCRS/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/TCRS/" rel="alternate" type="text/html" /><updated>2024-03-04T17:37:19+08:00</updated><id>http://localhost:4000/TCRS/feed.xml</id><title type="html">Home</title><subtitle>系統會記錄玩家排名，並顯示在網站上。你可以隨時查看自己的積分和排名，並與其他玩家競爭。
 </subtitle><author><name>LiXiang</name></author><entry><title type="html">Open Source</title><link href="http://localhost:4000/TCRS/jekyll/2024-03-03-Open-Source.html" rel="alternate" type="text/html" title="Open Source" /><published>2024-03-03T00:00:00+08:00</published><updated>2024-03-03T00:00:00+08:00</updated><id>http://localhost:4000/TCRS/jekyll/Open%20Source</id><content type="html" xml:base="http://localhost:4000/TCRS/jekyll/2024-03-03-Open-Source.html"><![CDATA[<hr />
 <h1 id="accessing-the-cr-api-using-python">Accessing the CR API using Python</h1>
 
 <p>Users must obtain the corresponding API key to use. Please go to <a href="https://developer.clashroyale.com/#/">https://developer.clashroyale.com/#/</a></p>
 
-<p>If you like my work, please go to the GitHub repository <a href="https://github.com/Xiang511/CR-API">Xiang511/CR-API</a> to star this project.</p>
+<p>If you like my project, please consider giving it a star. <a href="https://github.com/Xiang511/CR-API">Xiang511/CR-API</a></p>
+
+<p><img src="https://socialify.git.ci/Xiang511/CR-API/image?description=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Signal&amp;theme=Light" alt="CR-API" /></p>
 
 <h2 id="features">Features</h2>
 <ul>
-  <li>Search Clan information =&gt; FindClan.py</li>
-  <li>Search Player information =&gt; Player.py</li>
-  <li>Search local rankings =&gt; LocalRankings.py</li>
-  <li>Search player achievement records =&gt; PlayerProfile.py</li>
+  <li>Search Clan information</li>
+  <li>Search Player information</li>
+  <li>Search local rankings</li>
+  <li>Search player achievement records</li>
 </ul>
 
 <h2 id="under-development">Under development</h2>
@@ -25,9 +27,13 @@
 
 <p>More code can be found on <a href="https://github.com/Xiang511/CR-API">GitHub</a></p>
 
-<p>DEMO <a href="https://www.youtube.com/watch?v=BKnR_kre6QI&amp;ab_channel=XiangFang">YouTube</a></p>
+<p>DEMO : <a href="https://www.youtube.com/watch?v=BKnR_kre6QI&amp;ab_channel=XiangFang">https://www.youtube.com/watch?v=BKnR_kre6QI&amp;ab_channel=XiangFang</a></p>
 
 <h3 id="findclanpy">FindClan.py</h3>
+<blockquote class="block-tip">
+  <p>Search Clan information</p>
+</blockquote>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import requests
 import pandas as pd
 import time
@@ -71,6 +77,9 @@ except Exception as e:
 </code></pre></div></div>
 <hr />
 <h3 id="playerpy">Player.py</h3>
+<blockquote class="block-tip">
+  <p>Search Player information</p>
+</blockquote>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import openpyxl
 import requests
@@ -140,6 +149,9 @@ print(f"Time：{end_time - start_time}")
 </code></pre></div></div>
 <hr />
 <h3 id="localranking">LocalRanking</h3>
+<blockquote class="block-tip">
+  <p>Search local rankings</p>
+</blockquote>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import requests
 import openpyxl
@@ -193,6 +205,9 @@ print(f"Time：{end_time - start_time}")
 
 <hr />
 <h3 id="playerprofile">PlayerProfile</h3>
+<blockquote class="block-tip">
+  <p>Search player achievement records</p>
+</blockquote>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import openpyxl
 import requests

@@ -10,14 +10,16 @@ layout: post
 
 Users must obtain the corresponding API key to use. Please go to [https://developer.clashroyale.com/#/](https://developer.clashroyale.com/#/)
 
-If you like my work, please go to the GitHub repository [Xiang511/CR-API](https://github.com/Xiang511/CR-API) to star this project.
+If you like my project, please consider giving it a star. [Xiang511/CR-API](https://github.com/Xiang511/CR-API) 
+
+![CR-API](https://socialify.git.ci/Xiang511/CR-API/image?description=1&language=1&name=1&owner=1&pattern=Signal&theme=Light)
 
 
 ## Features 
--  Search Clan information => FindClan.py 
--  Search Player information => Player.py  
--  Search local rankings => LocalRankings.py  
--  Search player achievement records => PlayerProfile.py 
+-  Search Clan information
+-  Search Player information  
+-  Search local rankings 
+-  Search player achievement records
 
 ## Under development
 - Implement a GUI
@@ -28,9 +30,12 @@ Here are some example code samples.
 
 More code can be found on [GitHub](https://github.com/Xiang511/CR-API)
 
-DEMO [YouTube](https://www.youtube.com/watch?v=BKnR_kre6QI&ab_channel=XiangFang)
+DEMO : [https://www.youtube.com/watch?v=BKnR_kre6QI&ab_channel=XiangFang](https://www.youtube.com/watch?v=BKnR_kre6QI&ab_channel=XiangFang)
 
 ### FindClan.py
+> Search Clan information
+{: .block-tip }
+
 ```
 import requests
 import pandas as pd
@@ -75,6 +80,8 @@ except Exception as e:
 ```
 ----------------
 ### Player.py
+> Search Player information  
+{: .block-tip }
 
 ```
 import openpyxl
@@ -145,6 +152,8 @@ print(f"Time：{end_time - start_time}")
 ````
 ------------
 ### LocalRanking
+> Search local rankings
+{: .block-tip }
 
 ```
 import requests
@@ -199,7 +208,8 @@ print(f"Time：{end_time - start_time}")
 
 ----------------
 ### PlayerProfile
-
+> Search player achievement records
+{: .block-tip }
 
 ```
 import openpyxl
