@@ -103,6 +103,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-readme-index
   jemoji
+  rouge
   webrick
 
 BUNDLED WITH

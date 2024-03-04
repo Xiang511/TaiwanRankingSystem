@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/TCRS/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/TCRS/" rel="alternate" type="text/html" /><updated>2024-03-04T23:54:51+08:00</updated><id>http://localhost:4000/TCRS/feed.xml</id><title type="html">Home</title><subtitle>系統會記錄玩家排名，並顯示在網站上。你可以隨時查看自己的積分和排名，並與其他玩家競爭。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/TCRS/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/TCRS/" rel="alternate" type="text/html" /><updated>2024-03-05T01:15:03+08:00</updated><id>http://localhost:4000/TCRS/feed.xml</id><title type="html">Home</title><subtitle>系統會記錄玩家排名，並顯示在網站上。你可以隨時查看自己的積分和排名，並與其他玩家競爭。
 </subtitle><author><name>LiXiang</name></author><entry><title type="html">Open Source</title><link href="http://localhost:4000/TCRS/jekyll/2024-03-03-Open-Source.html" rel="alternate" type="text/html" title="Open Source" /><published>2024-03-03T00:00:00+08:00</published><updated>2024-03-03T00:00:00+08:00</updated><id>http://localhost:4000/TCRS/jekyll/Open%20Source</id><content type="html" xml:base="http://localhost:4000/TCRS/jekyll/2024-03-03-Open-Source.html"><![CDATA[<hr />
 <h1 id="accessing-the-cr-api-using-python">Accessing the CR API using Python</h1>
 
@@ -34,46 +34,46 @@
   <p>Search Clan information</p>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import requests
-import pandas as pd
-import time
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">time</span>
 
-#Calculate starting time
-start_time = time.time()
+<span class="c1">#Calculate starting time
+</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
 
-# Enter your key
+<span class="c1"># Enter your key
 # Go to https://developer.clashroyale.com/#/ 
+</span>
+<span class="n">API_KEY</span> <span class="o">=</span> <span class="sh">""</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">Authorization</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Bearer {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">API_KEY</span><span class="p">)</span>
+<span class="p">}</span>
 
-API_KEY = ""
-headers = {
-    "Authorization": "Bearer {}".format(API_KEY)
-}
-
-# GET ClanTag
+<span class="c1"># GET ClanTag
 #ex: %23QCRY22P8
-
-clan_tag = "%23QCRY22P8"
-
-
-url = "https://api.clashroyale.com/v1/clans/{}".format(clan_tag)
-response = requests.get(url, headers=headers)
+</span>
+<span class="n">clan_tag</span> <span class="o">=</span> <span class="sh">"</span><span class="s">%23QCRY22P8</span><span class="sh">"</span>
 
 
-try:
-    if response.status_code == 200:
-        clan = response.json()
+<span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://api.clashroyale.com/v1/clans/{}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">clan_tag</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
-        df = pd.DataFrame(clan["memberList"])
-        df.to_excel("FindClan.xlsx")
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">clan</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="nf">json</span><span class="p">()</span>
+
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">clan</span><span class="p">[</span><span class="sh">"</span><span class="s">memberList</span><span class="sh">"</span><span class="p">])</span>
+        <span class="n">df</span><span class="p">.</span><span class="nf">to_excel</span><span class="p">(</span><span class="sh">"</span><span class="s">FindClan.xlsx</span><span class="sh">"</span><span class="p">)</span>
 
         
-        end_time = time.time()
+        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
         
-        print(f"Time：{end_time - start_time}")
-    else:
-        print(response.status_code)
-except Exception as e:
-    print(e)
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Time：</span><span class="si">{</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </code></pre></div></div>
 <hr />
 <h3 id="playerpy">Player.py</h3>
@@ -81,71 +81,71 @@ except Exception as e:
   <p>Search Player information</p>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import openpyxl
-import requests
-import json
-import time
-from tqdm import tqdm
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">openpyxl</span>
+<span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">json</span>
+<span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="n">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
 
-#Calculate starting time
-start_time = time.time()
+<span class="c1">#Calculate starting time
+</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
 
-# Enter your key
+<span class="c1"># Enter your key
 # Go to https://developer.clashroyale.com/#/ 
-API_KEY = ""
+</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="sh">""</span>
 
-headers = {
-    "Authorization": "Bearer {}".format(API_KEY)
-}
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">Authorization</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Bearer {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">API_KEY</span><span class="p">)</span>
+<span class="p">}</span>
 
-# enter your tag
+<span class="c1"># enter your tag
 # ex: '%2322R920J00','%2312345678'
-
-player_tags = ["%2322R920J00", "%23V99082R9C"]
-
-
-
-wb = openpyxl.Workbook()
-ws = wb.active
-
-ws["A1"] = "Tag"
-ws["B1"] = "BEST"
-ws["C1"] = "LAST"
+</span>
+<span class="n">player_tags</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">%2322R920J00</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">%23V99082R9C</span><span class="sh">"</span><span class="p">]</span>
 
 
-def clean_result(result):
-    if result is None:
-        return ""
-    return result[result.rfind(" ") + 1:].split("}")[0]
-#ex:
+
+<span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="p">.</span><span class="nc">Workbook</span><span class="p">()</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="p">.</span><span class="n">active</span>
+
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">A1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Tag</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">B1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">BEST</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">C1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">LAST</span><span class="sh">"</span>
+
+
+<span class="k">def</span> <span class="nf">clean_result</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sh">""</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="p">.</span><span class="nf">rfind</span><span class="p">(</span><span class="sh">"</span><span class="s"> </span><span class="sh">"</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:].</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="s">}</span><span class="sh">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1">#ex:
 #   best = json.dumps(player_data.get("bestPathOfLegendSeasonResult"))
 #   回傳值為{"leagueNumber": 10, "trophies": 2416, "rank": 2573}
 #
 #   另 best2 = clean_result(best)
 #   則 best2 = 2573
+</span>
+<span class="k">for</span> <span class="n">player_tag</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">player_tags</span><span class="p">):</span>
 
-for player_tag in tqdm(player_tags):
-
-    response = requests.get(f"https://api.clashroyale.com/v1/players/{player_tag}", headers=headers)
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">https://api.clashroyale.com/v1/players/</span><span class="si">{</span><span class="n">player_tag</span><span class="si">}</span><span class="sh">"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
     
-    player_data = response.json()
+    <span class="n">player_data</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="nf">json</span><span class="p">()</span>
 
-    best = json.dumps(player_data.get("bestPathOfLegendSeasonResult"))
-    last = json.dumps(player_data.get("lastPathOfLegendSeasonResult"))
+    <span class="n">best</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">dumps</span><span class="p">(</span><span class="n">player_data</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">bestPathOfLegendSeasonResult</span><span class="sh">"</span><span class="p">))</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">dumps</span><span class="p">(</span><span class="n">player_data</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">lastPathOfLegendSeasonResult</span><span class="sh">"</span><span class="p">))</span>
 
-    best2 = clean_result(best)
-    last2= clean_result(last)
+    <span class="n">best2</span> <span class="o">=</span> <span class="nf">clean_result</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+    <span class="n">last2</span><span class="o">=</span> <span class="nf">clean_result</span><span class="p">(</span><span class="n">last</span><span class="p">)</span>
 
-    ws.append([
-    player_data["name"],
-    best2,
-    last2])
+    <span class="n">ws</span><span class="p">.</span><span class="nf">append</span><span class="p">([</span>
+    <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">],</span>
+    <span class="n">best2</span><span class="p">,</span>
+    <span class="n">last2</span><span class="p">])</span>
 
-wb.save("Player.xlsx")
+<span class="n">wb</span><span class="p">.</span><span class="nf">save</span><span class="p">(</span><span class="sh">"</span><span class="s">Player.xlsx</span><span class="sh">"</span><span class="p">)</span>
 
-#Calculate end time
-end_time = time.time()
-print(f"Time：{end_time - start_time}")
+<span class="c1">#Calculate end time
+</span><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Time：</span><span class="si">{</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 <hr />
 <h3 id="localranking">LocalRanking</h3>
@@ -153,54 +153,54 @@ print(f"Time：{end_time - start_time}")
   <p>Search local rankings</p>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import requests
-import openpyxl
-import datetime
-import time
-from tqdm import tqdm
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">openpyxl</span>
+<span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="n">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
 
-#Calculate starting time
-start_time = time.time()
+<span class="c1">#Calculate starting time
+</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
 
-#Enter your key
+<span class="c1">#Enter your key
 #Go to https://developer.clashroyale.com/#/ 
+</span>
+<span class="n">API_KEY</span> <span class="o">=</span> <span class="sh">""</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">Authorization</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Bearer {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">API_KEY</span><span class="p">)</span>
+<span class="p">}</span>
 
-API_KEY = ""
-headers = {
-    "Authorization": "Bearer {}".format(API_KEY)
-}
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">https://api.clashroyale.com/v1/locations/57000228/pathoflegend/players</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="p">)</span>
 
-response = requests.get(
-    "https://api.clashroyale.com/v1/locations/57000228/pathoflegend/players",
-    headers=headers,
-)
-
-#How do I know my area code? ex:57000228
+<span class="c1">#How do I know my area code? ex:57000228
 #Check Area Code File
+</span>
+<span class="c1">#Get Time
+</span><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">()</span>
+<span class="n">now_str</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="sh">"</span><span class="s">%Y-%m-%d</span><span class="sh">"</span><span class="p">)</span>
 
-#Get Time
-now = datetime.datetime.now()
-now_str = now.strftime("%Y-%m-%d")
+<span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="p">.</span><span class="nc">Workbook</span><span class="p">()</span> 
+<span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="p">.</span><span class="n">active</span>
 
-wb = openpyxl.Workbook() 
-ws = wb.active
+<span class="n">ws</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span> <span class="o">=</span> <span class="sh">"</span><span class="s">ID</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">2</span><span class="p">).</span><span class="n">value</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Name</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">3</span><span class="p">).</span><span class="n">value</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Rating</span><span class="sh">"</span>
 
-ws.cell(row=1, column=1).value = "ID"
-ws.cell(row=1, column=2).value = "Name"
-ws.cell(row=1, column=3).value = "Rating"
+<span class="n">row_number</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">items</span><span class="sh">"</span><span class="p">]):</span>
+    <span class="n">ws</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row_number</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span> <span class="o">=</span> <span class="n">player</span><span class="p">[</span><span class="sh">"</span><span class="s">tag</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">ws</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row_number</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">2</span><span class="p">).</span><span class="n">value</span> <span class="o">=</span> <span class="n">player</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">ws</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row_number</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">3</span><span class="p">).</span><span class="n">value</span> <span class="o">=</span> <span class="n">player</span><span class="p">[</span><span class="sh">"</span><span class="s">eloRating</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">row_number</span> <span class="o">+=</span> <span class="mi">1</span>
 
-row_number = 2
-for player in tqdm(response.json()["items"]):
-    ws.cell(row=row_number, column=1).value = player["tag"]
-    ws.cell(row=row_number, column=2).value = player["name"]
-    ws.cell(row=row_number, column=3).value = player["eloRating"]
-    row_number += 1
+<span class="n">wb</span><span class="p">.</span><span class="nf">save</span><span class="p">(</span><span class="n">now_str</span><span class="o">+</span><span class="sh">"</span><span class="s">.xlsx</span><span class="sh">"</span><span class="p">)</span>
 
-wb.save(now_str+".xlsx")
-
-#Calculate end time
-end_time = time.time()
-print(f"Time：{end_time - start_time}")
+<span class="c1">#Calculate end time
+</span><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Time：</span><span class="si">{</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <hr />
@@ -209,85 +209,85 @@ print(f"Time：{end_time - start_time}")
   <p>Search player achievement records</p>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import openpyxl
-import requests
-import time
-from tqdm import tqdm
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">openpyxl</span>
+<span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="n">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
 
-#Calculate starting time
-start_time = time.time()
+<span class="c1">#Calculate starting time
+</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
 
-#Enter your key
+<span class="c1">#Enter your key
 #Go to https://developer.clashroyale.com/#/ 
+</span>
+<span class="n">API_KEY</span> <span class="o">=</span> <span class="sh">""</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">Authorization</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Bearer {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">API_KEY</span><span class="p">)</span>
+<span class="p">}</span>
 
-API_KEY = ""
-headers = {
-    "Authorization": "Bearer {}".format(API_KEY)
-}
-
-#Enter your tag
+<span class="c1">#Enter your tag
 #ex: '%2322R920J00','%2312345678'
-
-player_tags = ['%2322R920J00']
+</span>
+<span class="n">player_tags</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">%2322R920J00</span><span class="sh">'</span><span class="p">]</span>
               
-wb = openpyxl.Workbook()
-ws = wb.active
+<span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="p">.</span><span class="nc">Workbook</span><span class="p">()</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="p">.</span><span class="n">active</span>
 
-ws["A1"] = "Tag"
-ws["B1"] = "Classic12Wins"
-ws["C1"] = "Grand12Wins"
-ws["D1"] = "YearsPlayed"
-ws["E1"] = "EmoteCollection"
-ws["F1"] = "BannerCollection"
-ws["G1"] = "starPoints"
-ws["H1"] = "totalExpPoints"
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">A1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Tag</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">B1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Classic12Wins</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">C1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Grand12Wins</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">D1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">YearsPlayed</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">E1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">EmoteCollection</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">F1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">BannerCollection</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">G1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">starPoints</span><span class="sh">"</span>
+<span class="n">ws</span><span class="p">[</span><span class="sh">"</span><span class="s">H1</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">totalExpPoints</span><span class="sh">"</span>
 
 
-for player_tag in tqdm(player_tags):
-    response = requests.get(f"https://api.clashroyale.com/v1/players/{player_tag}", headers=headers)
+<span class="k">for</span> <span class="n">player_tag</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">player_tags</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">https://api.clashroyale.com/v1/players/</span><span class="si">{</span><span class="n">player_tag</span><span class="si">}</span><span class="sh">"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
     
-    player_data = response.json()
+    <span class="n">player_data</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="nf">json</span><span class="p">()</span>
 
-    Classic12WinsCout =0 
-    Grand12WinsCout = 0
+    <span class="n">Classic12WinsCout</span> <span class="o">=</span><span class="mi">0</span> 
+    <span class="n">Grand12WinsCout</span> <span class="o">=</span> <span class="mi">0</span>
 
-    starPoints = player_data["starPoints"]
-    totalExpPoints = player_data["totalExpPoints"]
+    <span class="n">starPoints</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">starPoints</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">totalExpPoints</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">totalExpPoints</span><span class="sh">"</span><span class="p">]</span>
     
-    for Classic12Wins in player_data["badges"]:
-       if Classic12Wins["name"] == "Classic12Wins":
-        Classic12WinsCout = Classic12Wins["progress"]
+    <span class="k">for</span> <span class="n">Classic12Wins</span> <span class="ow">in</span> <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">badges</span><span class="sh">"</span><span class="p">]:</span>
+       <span class="k">if</span> <span class="n">Classic12Wins</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">Classic12Wins</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">Classic12WinsCout</span> <span class="o">=</span> <span class="n">Classic12Wins</span><span class="p">[</span><span class="sh">"</span><span class="s">progress</span><span class="sh">"</span><span class="p">]</span>
 
-    for Grand12Wins in player_data["badges"]:
-       if Grand12Wins["name"] == "Grand12Wins":
-        Grand12WinsCout = Grand12Wins["progress"]
+    <span class="k">for</span> <span class="n">Grand12Wins</span> <span class="ow">in</span> <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">badges</span><span class="sh">"</span><span class="p">]:</span>
+       <span class="k">if</span> <span class="n">Grand12Wins</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">Grand12Wins</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">Grand12WinsCout</span> <span class="o">=</span> <span class="n">Grand12Wins</span><span class="p">[</span><span class="sh">"</span><span class="s">progress</span><span class="sh">"</span><span class="p">]</span>
 
-    for YearsPlayed in player_data["badges"]:
-       if YearsPlayed["name"] == "YearsPlayed":
-        YearsPlayedCout = YearsPlayed["progress"]
+    <span class="k">for</span> <span class="n">YearsPlayed</span> <span class="ow">in</span> <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">badges</span><span class="sh">"</span><span class="p">]:</span>
+       <span class="k">if</span> <span class="n">YearsPlayed</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">YearsPlayed</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">YearsPlayedCout</span> <span class="o">=</span> <span class="n">YearsPlayed</span><span class="p">[</span><span class="sh">"</span><span class="s">progress</span><span class="sh">"</span><span class="p">]</span>
 
-    for EmoteCollection in player_data["badges"]:
-       if EmoteCollection["name"] == "EmoteCollection":
-        EmoteCollectionCout = EmoteCollection["progress"]
+    <span class="k">for</span> <span class="n">EmoteCollection</span> <span class="ow">in</span> <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">badges</span><span class="sh">"</span><span class="p">]:</span>
+       <span class="k">if</span> <span class="n">EmoteCollection</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">EmoteCollection</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">EmoteCollectionCout</span> <span class="o">=</span> <span class="n">EmoteCollection</span><span class="p">[</span><span class="sh">"</span><span class="s">progress</span><span class="sh">"</span><span class="p">]</span>
 
-    for BannerCollection in player_data["badges"]:
-       if BannerCollection["name"] == "BannerCollection":
-        BannerCollectionCout = BannerCollection["progress"]
+    <span class="k">for</span> <span class="n">BannerCollection</span> <span class="ow">in</span> <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">badges</span><span class="sh">"</span><span class="p">]:</span>
+       <span class="k">if</span> <span class="n">BannerCollection</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">BannerCollection</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">BannerCollectionCout</span> <span class="o">=</span> <span class="n">BannerCollection</span><span class="p">[</span><span class="sh">"</span><span class="s">progress</span><span class="sh">"</span><span class="p">]</span>
 
 
-    # for PracticewithFriendsCout in player_data["achievements"]:
-    #   if PracticewithFriendsCout["name"] == "Practice with Friends":
-    #     PracticewithFriendsCoutCout = PracticewithFriendsCout["value"]
+    <span class="c1"># for PracticewithFriendsCout in player_data["achievements"]:
+</span>    <span class="c1">#   if PracticewithFriendsCout["name"] == "Practice with Friends":
+</span>    <span class="c1">#     PracticewithFriendsCoutCout = PracticewithFriendsCout["value"]
+</span>
+    <span class="n">ws</span><span class="p">.</span><span class="nf">append</span><span class="p">([</span>
+    <span class="n">player_data</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">],</span><span class="n">Classic12WinsCout</span><span class="p">,</span><span class="n">Grand12WinsCout</span><span class="p">,</span><span class="n">YearsPlayedCout</span><span class="p">,</span><span class="n">EmoteCollectionCout</span><span class="p">,</span><span class="n">BannerCollectionCout</span><span class="p">,</span><span class="n">starPoints</span><span class="p">,</span><span class="n">totalExpPoints</span>
+    <span class="p">])</span>
 
-    ws.append([
-    player_data["name"],Classic12WinsCout,Grand12WinsCout,YearsPlayedCout,EmoteCollectionCout,BannerCollectionCout,starPoints,totalExpPoints
-    ])
+<span class="n">wb</span><span class="p">.</span><span class="nf">save</span><span class="p">(</span><span class="sh">"</span><span class="s">PlayerProfile.xlsx</span><span class="sh">"</span><span class="p">)</span>
 
-wb.save("PlayerProfile.xlsx")
-
-#Calculate end time
-end_time = time.time()
-print(f"Time：{end_time - start_time}")
+<span class="c1">#Calculate end time
+</span><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Time：</span><span class="si">{</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h2 id="license">License</h2>

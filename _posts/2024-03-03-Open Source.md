@@ -36,7 +36,7 @@ DEMO : [https://www.youtube.com/watch?v=BKnR_kre6QI&ab_channel=XiangFang](https:
 > Search Clan information
 {: .block-tip }
 
-```
+```python
 import requests
 import pandas as pd
 import time
@@ -83,7 +83,7 @@ except Exception as e:
 > Search Player information  
 {: .block-tip }
 
-```
+```python
 import openpyxl
 import requests
 import json
@@ -155,7 +155,7 @@ print(f"Time：{end_time - start_time}")
 > Search local rankings
 {: .block-tip }
 
-```
+```python
 import requests
 import openpyxl
 import datetime
@@ -211,7 +211,7 @@ print(f"Time：{end_time - start_time}")
 > Search player achievement records
 {: .block-tip }
 
-```
+```python
 import openpyxl
 import requests
 import time
