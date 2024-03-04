@@ -14,6 +14,9 @@ If you like my project, please consider giving it a star. [Xiang511/CR-API](http
 
 ![CR-API](https://socialify.git.ci/Xiang511/CR-API/image?description=1&language=1&name=1&owner=1&pattern=Signal&theme=Light)
 
+![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)
+![GitHub Release](https://img.shields.io/github/v/release/Xiang511/CR-API?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/Xiang511/CR-API?style=for-the-badge&color=blue)
 
 ## Features 
 -  Search Clan information
@@ -296,5 +299,6 @@ print(f"Time：{end_time - start_time}")
 
 ## License
 
+This work is open source under the MIT License.
 
-![GitHub License](https://img.shields.io/github/license/Xiang511/CR-API?style=for-the-badge)
+Copyright © 2024 Li Xiang 
