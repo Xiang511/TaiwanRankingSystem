@@ -28,10 +28,6 @@ If you like my project, please consider giving it a star. [GitHub](https://githu
 -  Search local rankings 
 -  Search player achievement records
 
-## Under development
-- Implement a GUI
-
---------------
 ## Example Usage
 Here are some example code samples.
 
@@ -301,7 +297,17 @@ print(f"Time：{end_time - start_time}")
 ```
 
 
-## License
+## Under development
+
+Providing a GUI interface for a program. The following is an example.
+
+| before | after |
+| ![assets](../assets/demo1.png) | ![assets](../assets/Demo.png) |
+
+
+
+
+## License 
 
 This work is open source under the MIT License.
 
