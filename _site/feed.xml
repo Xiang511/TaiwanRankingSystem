@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/TCRS/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/TCRS/" rel="alternate" type="text/html" /><updated>2024-03-05T11:44:42+08:00</updated><id>http://localhost:4000/TCRS/feed.xml</id><title type="html">Home</title><subtitle>系統會記錄玩家排名，並顯示在網站上。你可以隨時查看自己的積分和排名，並與其他玩家競爭。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/TCRS/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/TCRS/" rel="alternate" type="text/html" /><updated>2024-03-05T14:21:29+08:00</updated><id>http://localhost:4000/TCRS/feed.xml</id><title type="html">Home</title><subtitle>系統會記錄玩家排名，並顯示在網站上。你可以隨時查看自己的積分和排名，並與其他玩家競爭。
 </subtitle><author><name>LiXiang</name></author><entry><title type="html">Open Source</title><link href="http://localhost:4000/TCRS/jekyll/2024-03-03-Open-Source.html" rel="alternate" type="text/html" title="Open Source" /><published>2024-03-03T00:00:00+08:00</published><updated>2024-03-03T00:00:00+08:00</updated><id>http://localhost:4000/TCRS/jekyll/Open%20Source</id><content type="html" xml:base="http://localhost:4000/TCRS/jekyll/2024-03-03-Open-Source.html"><![CDATA[<hr />
-<h1 id="accessing-the-cr-api-using-python">Accessing the CR API using Python</h1>
 
-<p>Users must obtain the corresponding API key to use. Please go to <a href="https://developer.clashroyale.com/#/">https://developer.clashroyale.com/#/</a></p>
+<p><img src="https://socialify.git.ci/Xiang511/CR-API/image?language=1&amp;name=1&amp;owner=1&amp;pattern=Brick%20Wall&amp;theme=Light" alt="CR-API" /></p>
 
-<p>If you like my project, please consider giving it a star. <a href="https://github.com/Xiang511/CR-API">Xiang511/CR-API</a></p>
-
-<p><img src="https://socialify.git.ci/Xiang511/CR-API/image?description=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Signal&amp;theme=Light" alt="CR-API" /></p>
-
-<p><img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=fff&amp;style=for-the-badge" alt="Python Badge" />
+<p><img src="https://img.shields.io/github/last-commit/Xiang511/CR-API?display_timestamp=author&amp;style=for-the-badge&amp;color=blue" alt="GitHub last commit" />
+<img src="https://img.shields.io/github/created-at/Xiang511/CR-API?style=for-the-badge&amp;color=blue" alt="Github Created At" />
 <img src="https://img.shields.io/github/v/release/Xiang511/CR-API?style=for-the-badge" alt="GitHub Release" />
 <img src="https://img.shields.io/github/license/Xiang511/CR-API?style=for-the-badge&amp;color=blue" alt="GitHub License" /></p>
+<h1 id="accessing-the-cr-api-using-python">Accessing the CR API using Python</h1>
+
+<p>Users must obtain the corresponding API key to use. Please go to <a href="https://developer.clashroyale.com/#/">Official Document</a><br />
+If you like my project, please consider giving it a star. <a href="https://github.com/Xiang511/CR-API">GitHub</a></p>
 
 <h2 id="features">Features</h2>
 <ul>
@@ -298,7 +298,10 @@
 
 <p>This work is open source under the MIT License.</p>
 
-<p>Copyright © 2024 Li Xiang</p>]]></content><author><name>LiXiang</name></author><category term="Jekyll" /><summary type="html"><![CDATA[Accessing the CR API using Python]]></summary></entry><entry><title type="html">All releases</title><link href="http://localhost:4000/TCRS/jekyll/2024-03-01-AllReleases.html" rel="alternate" type="text/html" title="All releases" /><published>2024-03-01T00:00:00+08:00</published><updated>2024-03-01T00:00:00+08:00</updated><id>http://localhost:4000/TCRS/jekyll/AllReleases</id><content type="html" xml:base="http://localhost:4000/TCRS/jekyll/2024-03-01-AllReleases.html"><![CDATA[<hr />
+<p>Copyright © 2024 Li Xiang</p>]]></content><author><name>LiXiang</name></author><category term="Jekyll" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">All releases</title><link href="http://localhost:4000/TCRS/jekyll/2024-03-01-AllReleases.html" rel="alternate" type="text/html" title="All releases" /><published>2024-03-01T00:00:00+08:00</published><updated>2024-03-01T00:00:00+08:00</updated><id>http://localhost:4000/TCRS/jekyll/AllReleases</id><content type="html" xml:base="http://localhost:4000/TCRS/jekyll/2024-03-01-AllReleases.html"><![CDATA[<hr />
+<p><img src="https://socialify.git.ci/Xiang511/hydromechanics/image?language=1&amp;name=1&amp;owner=1&amp;theme=Light" alt="hydromechanics" /></p>
+
+<p><img src="https://img.shields.io/github/last-commit/Xiang511/hydromechanics?display_timestamp=author&amp;style=for-the-badge&amp;color=yellow" alt="GitHub last commit" /> <img src="https://img.shields.io/github/commits-since/Xiang511/hydromechanics/v1.3?style=for-the-badge&amp;color=yellow" alt="GitHub commits since tagged version" /> <img src="https://img.shields.io/github/created-at/Xiang511/hydromechanics?style=for-the-badge&amp;color=yellow" alt="Github Created At" /></p>
 
 <h2 id="v132">V1.3.2</h2>
 <p>2024-2-25 V1.3.2</p>
@@ -307,10 +310,6 @@
   <li>新增
  網站導覽介紹 Driver.js</li>
 </ul>
-
-<blockquote class="block-tip">
-  <p><strong>最新版本↑↑</strong></p>
-</blockquote>
 
 <hr />
 

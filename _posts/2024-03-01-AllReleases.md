@@ -7,6 +7,12 @@ layout: post
 ---
 
 --------
+![hydromechanics](https://socialify.git.ci/Xiang511/hydromechanics/image?language=1&name=1&owner=1&theme=Light)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Xiang511/hydromechanics?display_timestamp=author&style=for-the-badge&color=yellow) ![GitHub commits since tagged version](https://img.shields.io/github/commits-since/Xiang511/hydromechanics/v1.3?style=for-the-badge&color=yellow) ![Github Created At](https://img.shields.io/github/created-at/Xiang511/hydromechanics?style=for-the-badge&color=yellow)
+
+
+
 
 V1.3.2
 ---
@@ -14,9 +20,6 @@ V1.3.2
 
 - 新增
  網站導覽介紹 Driver.js
-
-> **最新版本↑↑**
-{: .block-tip }
 
 --------
 
