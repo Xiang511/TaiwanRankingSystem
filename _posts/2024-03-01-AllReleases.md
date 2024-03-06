@@ -9,7 +9,7 @@ layout: post
 --------
 ![hydromechanics](https://socialify.git.ci/Xiang511/hydromechanics/image?language=1&name=1&owner=1&theme=Light)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Xiang511/hydromechanics?display_timestamp=author&style=for-the-badge&color=yellow) ![Github Created At](https://img.shields.io/github/created-at/Xiang511/hydromechanics?style=for-the-badge&color=yellow) ![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=green) ![GitHub License](https://img.shields.io/github/license/Xiang511/hydromechanics?style=for-the-badge&color=green)
+![GitHub last commit](https://img.shields.io/github/last-commit/Xiang511/hydromechanics?display_timestamp=author&style=for-the-badge&color=yellow) ![Github Created At](https://img.shields.io/github/created-at/Xiang511/hydromechanics?style=for-the-badge&color=yellow) ![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=green) 
 
 
 
