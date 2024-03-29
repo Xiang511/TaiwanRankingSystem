@@ -311,4 +311,3 @@ Providing a GUI interface for a program. The following is an example.
 
 This work is open source under the MIT License.
 
-Copyright © 2024 Li Xiang 
