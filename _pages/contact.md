@@ -25,9 +25,11 @@ layout: post
 
 ---
 
-**Email: toby91511@gmail.com**
+**GitHub:** [Xiang511](https://github.com/Xiang511)
 
-**GitHub: Xiang511**
+**Website:** [xiang511.com](https://xiang511.com/)
+
+**Email: toby91511@gmail.com**
 
 
 
