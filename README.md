@@ -1,4 +1,4 @@
-## Taiwan Clash Royale Ranking System - TCRS
+# TCRS
 ![GitHub last commit](https://img.shields.io/github/last-commit/Xiang511/TCRS?style=flat-square)
 ![Github Created At](https://img.shields.io/github/created-at/Xiang511/TCRS?style=flat-square)
 ![GitHub Release](https://img.shields.io/github/v/release/Xiang511/TCRS?style=flat-square&color=green)
