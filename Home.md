@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 台灣皇室戰爭排名系統 V1.3.2
+title: 台灣皇室戰爭排名系統
 # cover: assets/banner.png
 permalink: /
 ---
