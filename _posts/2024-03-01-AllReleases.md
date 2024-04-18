@@ -2,7 +2,7 @@
 title: All releases
 author: LiXiang
 date: 2024-03-01
-category: Jekyll
+category: Release
 layout: post
 ---
 
